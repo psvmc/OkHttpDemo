@@ -30,10 +30,11 @@ public class MainActivity extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("userPhone","15225178360");
                 params.put("userLoginPswd","123456");
-                OkHttpUtils.postAsyn("http://t.yidaisong.com/login!in.do", new OkHttpUtils.ResultCallback<JsonObject>() {
+                OkHttpUtils.postAsyn("http://t.yidaisong.com:90/login!in.do", new OkHttpUtils.ResultCallback<JsonObject>() {
                     @Override
                     public void onError(Request request, Exception e) {
-
+                        Log.i("RESULT", "" + e.getMessage());
+                        showText.setText(""+ e.getMessage());
                     }
 
                     @Override
