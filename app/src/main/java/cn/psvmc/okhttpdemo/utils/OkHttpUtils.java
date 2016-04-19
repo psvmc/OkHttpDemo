@@ -428,10 +428,7 @@ public class OkHttpUtils {
     public static void downloadAsyn(String url, String destDir, ResultCallback callback) {
         getInstance()._downloadAsyn(url, destDir, callback);
     }
-
-    //****************************
-
-
+    
     private Request buildMultipartFormRequest(String url, File[] files,
                                               String[] fileKeys, Param[] params) {
         params = validateParam(params);
